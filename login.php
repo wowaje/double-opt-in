@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +8,6 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/scripts.js"></script>
-
 </head>
 <body>
 
@@ -29,15 +29,12 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
-      </div><!--container-->
+      </div>
     </nav>
 
 	<div class="row">
-		<div class="col-lg-6 col-lg-offset-3">
-    <?php include 'validate_user_registration';?>
-    <?php include 'register_user';?>
-    <?php include 'activate_user';?>
-
+		<div class="col-lg-6 col-lg-offset-3">	
+								
 		</div>
 
     	<div class="row">
@@ -46,49 +43,45 @@
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-xs-6">
-								<a href="login.php">Login</a>
+								<a href="login.php" class="active" id="login-form-link">Login</a>
 							</div>
 							<div class="col-xs-6">
-								<a href="register.php" class="active" id="register-form">Register</a>
+								<a href="register.php" id="">Register</a>
 							</div>
-						</div><!--row-->
+						</div>
 						<hr>
 					</div><!--panel-heading-->
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-                            <form id="register-form" form action="" method="post" role="form" >
+								<form id="login-form"  method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="first_name" id="first_name" tabindex="1" class="form-control" placeholder="First Name" value="" required >
-									</div>
-
-									<div class="form-group">
-										<input type="email" name="email" id="register_email" tabindex="2" class="form-control" placeholder="Email Address" value="" required >
-									</div>
-
-
-									<div class="form-group">
-										<input type="text" name="cell_ph_number" id="cell_ph_number" tabindex="3" class="form-control" placeholder="Cell_Phone_Number" value="" required >
-									</div>
-
-
-									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="4" class="form-control" placeholder="Username" value="" required >
+										<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" required>
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="5" class="form-control" placeholder="Password" required>
+										<input type="password" name="password" id="login-
+										password" tabindex="2" class="form-control" placeholder="Password" required>
 									</div>
-									<div class="form-group">
-										<input type="password" name="confirm_password" id="confirm-password" tabindex="6" class="form-control" placeholder="Confirm Password" required>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="7" class="form-control btn btn-register" value="Register Now">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
 											</div>
 										</div>
-									</div>
-
+									</div><!--form-group-->
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="recover.php" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div><!--form-group-->
 								</form>
 							</div>
 						</div>
